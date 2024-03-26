@@ -1,0 +1,106 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url("pexels-markus-spiske-12081662.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+nav {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 28px 100px;
+}
+
+h2 {
+    user-select: none;
+    font-size: 26px;
+    font-weight: 700;
+    color: yellow;
+}
+
+ul {
+    display: flex;
+}
+
+li {
+    list-style: none;
+    padding-left: 16px;
+}
+
+li a {
+    color: aliceblue;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0 18px;
+    position: relative;
+}
+
+li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background: yellow;
+    border-radius: 40px;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform .3s;
+}
+
+li a:hover::after {
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+.content {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-content {
+    max-width: 1200px;
+    text-align: center;
+    color: aliceblue;
+}
+
+.main-content h1 {
+    font-size: 3rem;
+}
+
+.main-content p {
+    margin-top: 20px;
+    font-size: 18px;
+    max-width: 700px;
+}
+
+.main-content button {
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 12px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    letter-spacing: .5px;
+    background: yellow;
+    outline: none;
+    border: none;
+    color: black;
+}
+
+.main-content span {
+    color: yellow;
+}
